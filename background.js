@@ -38,7 +38,8 @@ function capture(tabId, dimensions) {
                 var croppedDataUrl = canvas.toDataURL("image/png");
                 chrome.tabs.create({
                     url: croppedDataUrl,
-                    windowId: tab.windowId
+                    windowId: tab.windowId,
+					selected: false
                 });
             }
             image.src = dataUrl;
