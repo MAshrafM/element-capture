@@ -41,7 +41,11 @@ function capture(tabId, dimensions) {
                     windowId: tab.windowId,
 					active: false
                 });
-				
+				chrome.downloads.download({
+					url:croppedDataUrl,
+					conflictAction: "uniquify"
+					
+					});
 				
             }
             image.src = dataUrl;
