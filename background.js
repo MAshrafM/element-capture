@@ -39,8 +39,10 @@ function capture(tabId, dimensions) {
                 chrome.tabs.create({
                     url: croppedDataUrl,
                     windowId: tab.windowId,
-					selected: false
+					active: false
                 });
+				
+				
             }
             image.src = dataUrl;
         });
