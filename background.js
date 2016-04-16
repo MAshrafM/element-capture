@@ -36,11 +36,11 @@ function capture(tabId, dimensions) {
                     dimensions.width, dimensions.height
                 );
                 var croppedDataUrl = canvas.toDataURL("image/png");
-                chrome.tabs.create({
-                    url: croppedDataUrl,
-                    windowId: tab.windowId,
-					active: false
-                });
+                //chrome.tabs.create({
+                //    url: croppedDataUrl,
+                //    windowId: tab.windowId,
+				//	active: false
+               // });
 				chrome.downloads.download({
 					url:croppedDataUrl,
 					conflictAction: "uniquify"
